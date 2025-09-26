@@ -28,6 +28,7 @@
       <ul class="menu">
         <li><a href="#features">Features</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#auth">Log in</a></li>
         <li><a class="btn btn-primary" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -67,6 +68,41 @@
       <div class="card">
         <h2>About</h2>
         <p>This starter keeps the stack simple so you can focus on content. Add pages, components, or plug into your n8n webhooks.</p>
+      </div>
+    </section>
+
+    <section id="auth" class="section">
+      <h2 class="center">Account access</h2>
+      <div class="grid auth-grid">
+        <article class="card">
+          <h3>Create an account</h3>
+          <p class="muted">Stored in plain text for demo purposes only.</p>
+          <form id="signup-form" class="stack">
+            <label for="signup-username">Username</label>
+            <input id="signup-username" type="text" autocomplete="username" required />
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password" autocomplete="new-password" required />
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </form>
+          <details id="user-dump">
+            <summary>View stored users (insecure demo)</summary>
+            <pre id="user-dump-content" aria-live="polite">[]</pre>
+          </details>
+        </article>
+
+        <article class="card">
+          <h3>Log in</h3>
+          <p id="auth-status" class="muted"></p>
+          <form id="login-form" class="stack">
+            <label for="login-username">Username</label>
+            <input id="login-username" type="text" autocomplete="username" required />
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" autocomplete="current-password" required />
+            <button class="btn btn-primary" type="submit">Log in</button>
+          </form>
+          <button id="logout-btn" class="btn" type="button" hidden>Log out</button>
+          <p id="auth-message" class="muted"></p>
+        </article>
       </div>
     </section>
 
