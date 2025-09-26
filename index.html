@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +12,17 @@
   <header class="header">
     <nav class="container nav">
       <a class="brand" href="#"><img src="assets/logo.svg" alt="" width="28" height="28"> MySite</a>
+
+      <!-- THEME TOGGLE (top-right) -->
+      <button id="theme-toggle"
+              class="btn icon-btn theme-toggle"
+              aria-label="Toggle light mode"
+              aria-pressed="false"
+              title="Toggle light mode">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+        <span class="sr-only">Toggle light mode</span>
+      </button>
+
       <input id="nav-toggle" type="checkbox" />
       <label for="nav-toggle" class="burger" aria-label="Toggle navigation">☰</label>
       <ul class="menu">
